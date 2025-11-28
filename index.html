@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Linter & Prettifier</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>JSON Linter & Prettifier</h1>
+            <p class="subtitle">Parse, validate, and format JSON with ease</p>
+        </header>
+
+        <div class="main-content">
+            <div class="panel input-panel">
+                <div class="panel-header">
+                    <h2>Raw JSON Input</h2>
+                    <button class="btn-clear" id="clearBtn" title="Clear input">Clear</button>
+                </div>
+                <textarea 
+                    id="jsonInput" 
+                    placeholder='Paste your JSON here... e.g., {"name": "John", "age": 30}'
+                    spellcheck="false"
+                ></textarea>
+            </div>
+
+            <div class="panel output-panel">
+                <div class="panel-header">
+                    <h2>Formatted Output</h2>
+                    <button class="btn-copy" id="copyBtn" title="Copy to clipboard">
+                        <span class="copy-text">Copy</span>
+                        <span class="copied-text">Copied!</span>
+                    </button>
+                </div>
+                <pre id="jsonOutput" class="output-content"></pre>
+            </div>
+        </div>
+
+        <div class="error-message" id="errorMessage"></div>
+
+        <div class="controls">
+            <button class="btn btn-primary" id="prettifyBtn">
+                <span class="btn-icon">✨</span> Prettify
+            </button>
+            <button class="btn btn-secondary" id="minifyBtn">
+                <span class="btn-icon">📦</span> Minify
+            </button>
+            <button class="btn btn-tertiary" id="validateBtn">
+                <span class="btn-icon">✓</span> Validate
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
